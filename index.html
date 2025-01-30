@@ -3,62 +3,154 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="keywords" content="アラベリーオ,千冬,ara,belio,arabelio,chifuyu">
 <title>アラベリーオ千冬のホームページ</title>
 <style>
 body {
+    background-image: url("img/bg.png");
+    background-repeat: repeat;
+    background-size: 100px;
+    background-position: top left;
 	background-color: rgb(255, 145, 218);
 	color: black;
 }
-.content {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
-	flex-direction: column;
+table {
+	border: 1px solid #555555;
+}
+td {
+	text-align: center;
+	border: 1px solid #555555;
+	padding: 10px;
 }
 .hr {
 	width: 100%;
 	height: 1px;
 	background-color: #555555;
 }
-.title-box {
-	width: 400px;
-    font-size: 3rem;
-    font-weight: bold;
-    padding: 10px;
-    border: 4px solid red;
-    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-		-webkit-background-clip: text;
-		background-clip: text;
-    color: transparent;
-		-webkit-text-stroke: 2px white;
+.br {
+	height: 10px;
+	margin: 0;
+	padding: 0;
 }
-.space {
+.brbr {
 	height: 20px;
 	margin: 0;
 	padding: 0;
 }
+/* Content */
+.content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: auto;
+	flex-direction: column;
+	padding: 10px;
+}
+.updateat {
+	font-weight: bold;
+	font-size: 0.8rem;
+	color: #000000;
+}
+.menu {
+	font-weight: bold;
+	font-size: 0.9rem;
+	color: blue;
+}
+.notice {
+	font-weight: bold;
+	font-size: 0.9rem;
+	color: yellow;
+}
+.new {
+	font-weight: bold;
+	font-size: 0.8rem;
+	color: red;
+	animation: blink 1s step-start infinite;
+}
+.sougoulink {
+	font-weight: bold;
+	font-size: 0.9rem;
+	color: blue;
+	text-decoration: underline;
+}
+.title-area {
+	width: auto;
+    font-size: 3rem;
+    font-weight: bold;
+	font-family: "Arial", "Helvetica", sans-serif;
+	margin: 10px;
+    padding: 10px;
+    border: 4px solid red;
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+	-webkit-background-clip: text;
+	background-clip: text;
+    color: transparent;
+	-webkit-text-stroke: 2px white;
+	text-align: center;
+}
+/* Button */
+.button {
+    background-color: #0011ff;
+    border: none;
+    color: red;
+	font-weight: bold;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px #9c9c9c, -3px -3px 5px #d3d3d3;
+} .button:hover {
+	background-color: #ff0000;
+	color: white;
+}
+.button-disabled {
+	background-color: #979797;
+	border: none;
+	color: #ff0000;
+	font-weight: bold;
+	padding: 15px 15px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: not-allowed;
+	box-shadow: 3px 3px 5px #9c9c9c, -3px -3px 5px #d3d3d3;
+} .button-disabled:hover {
+	background-color: #a8a8a8;
+	color: #ff0000;
+}
+/* Marquee */
 .marquee {
-  --marquee-width: 400px;
-  width: var(--marquee-width);
-  overflow: hidden;
-	background-color: rgb(255, 255, 255);
+  	--marquee-width: 400px;
+  	width: var(--marquee-width);
+  	overflow: hidden;
+	background-color: rgb(54, 231, 63);
 	padding-left: 10px;
 	padding-top:4px;
 	padding-right: 10px;
 	padding-bottom: 4px;
 } .marquee > span {
-	--text-width: 180px;
+	--text-width: 240px;
 	font-size: 12px;
 	width: calc(var(--text-width));
-  color: black;
-  display: inline-block;
-  white-space: nowrap;
-  animation-name: MarqueeAnimation;
-  animation-timing-function: linear;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+  	color: rgb(255, 255, 255);
+  	display: inline-block;
+  	white-space: nowrap;
+  	animation-name: MarqueeAnimation;
+  	animation-timing-function: linear;
+  	animation-duration: 5s;
+  	animation-iteration-count: infinite;
+  	animation-direction: alternate;
+}
+/* Keyframes */
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
 @keyframes MarqueeAnimation {
 	0% { transform: translateX(0); }
@@ -68,14 +160,39 @@ body {
 </head>
 <body>
 <div class="content">
-	<div class="title-box">千冬のホームページ</div>
-	<div class="space"></div>
-  <div class="marquee"><span>ようこそ魔法のＧｉｔｈｕｂへ！</span></div>
-	<div class="space"></div>
+	<div class="title-area">千冬のホームページ</div>
+	<div class="brbr"></div>
+	<div class="updateat"><span>25/01/30更新</span></div>
+	<div class="brbr"></div>
+  	<div class="marquee"><span>ようこそ魔法のＧｉｔｈｕｂ　Ｐａｇｅへ！</span></div>
+	<div class="brbr"></div>
+	<div class="menu"><span>メニュー</span></div>
+	<div class="brbr"></div>
+	<a href="#" class="button-disabled">プロフィール（工事中）</a>
+	<div class="br"></div>
+	<a href="https://github.com/ChifuyuArabelio" class="button">ギットハブ</a>
+	<div class="brbr"></div>
 	<div class="hr"></div>
-	<div class="space"></div>
-	<div><span>開設日 2025年1月30日</span></div>
-	<div><span>更新日 2025年1月30日</span></div>
+	<div class="br"></div>
+	<div class="notice"><span>お知らせ</span></div>
+	<div class="brbr"></div>
+	<table>
+		<tbody>
+			<tr>
+				<td><span>更新情報</span></td>
+				<td><span>更新日時</span></td>
+			</tr>
+		</tbody>
+		<tr>
+			<td><span class="new">NEW</span> <span>ホームページリニューアル！</span></td>
+			<td><span>25/01/30</span></td>
+		</tr>
+	</table>
+	<div class="brbr"></div>
+	<div class="hr"></div>
+	<div class="brbr"></div>
+	<div class="sougoulink"><span>★★相互リンク募集中！無断リンク禁止★★</span></div>
+	<div class="brbr"></div>
 </div>
 </body>
 </html>
