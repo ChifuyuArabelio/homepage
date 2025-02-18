@@ -67,6 +67,17 @@ td {
 	color: red;
 	animation: blink 1s step-start infinite;
 }
+.my-computer {
+	font-weight: bold;
+	font-size: 0.9rem;
+	color: red;
+}
+.my-computer-image {
+  border-radius: 50%;
+  border: 2px solid #555555;
+  max-height: 300px;
+  width: auto;
+}
 .sougoulink {
 	font-weight: bold;
 	font-size: 0.9rem;
@@ -91,17 +102,17 @@ td {
 /* Button */
 .button {
     background-color: #0011ff;
-    border: none;
     color: red;
+    border: none;
 	font-weight: bold;
     padding: 15px 15px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
     cursor: pointer;
     box-shadow: 3px 3px 5px #9c9c9c, -3px -3px 5px #d3d3d3;
+	margin: 10px;
 } .button:hover {
 	background-color: #ff0000;
 	color: white;
@@ -156,6 +167,14 @@ td {
 	0% { transform: translateX(0); }
 	100% { transform: translateX(calc(var(--marquee-width) - var(--text-width))); }
 }
+/* Mobile */
+@media (max-width: 600px) {
+  .button, .button-disabled {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+  }
+}
 </style>
 </head>
 <body>
@@ -168,9 +187,26 @@ td {
 	<div class="brbr"></div>
 	<div class="menu"><span>メニュー</span></div>
 	<div class="brbr"></div>
-	<a href="#" class="button-disabled">プロフィール（工事中）</a>
+	<div>
+		<a href="https://github.com/ChifuyuArabelio/ChifuyuArabelio/blob/main/README.md" class="button">プロフィール</a>
+		<a href="#" class="button-disabled">BBS（工事中）</a>
+		<a href="https://github.com/ChifuyuArabelio" class="button">ギットハブ</a>
+	</div>
+	<div class="brbr"></div>
+	<div class="hr"></div>
 	<div class="br"></div>
-	<a href="https://github.com/ChifuyuArabelio" class="button">ギットハブ</a>
+	<div class="my-computer"><span>私のコンピューター</span></div>
+	<div class="brbr"></div>
+	<div>
+		<img src="img/cassiopeia_a51.jpeg" alt="CACIO CASSIOPEIA A-51" class="my-computer-image">
+	</div>
+	<div class="br"></div>
+	<div>
+		<p>CASIO カシオペア A-51</p>
+		<p>CPU: SH-3 80 MHz</p>
+		<p>OS: Windows(R) CE 1.0日本語版</p>
+		<p>メモリ: 8 MB</p>
+	</div>
 	<div class="brbr"></div>
 	<div class="hr"></div>
 	<div class="br"></div>
@@ -191,7 +227,7 @@ td {
 	<div class="brbr"></div>
 	<div class="hr"></div>
 	<div class="brbr"></div>
-	<div class="sougoulink"><span>★★相互リンク募集中！無断リンク禁止★★</span></div>
+	<div class="sougoulink"><span>★★★相互リンク募集中！無断リンク禁止★★★</span></div>
 	<div class="brbr"></div>
 </div>
 </body>
